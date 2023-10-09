@@ -1,7 +1,11 @@
 const Button = () => {
     const emitEvent = () => {
+        const eventData = { testData: "Sunil" };
         const event = new CustomEvent('microfrontendEvent', {
-            detail: { type: 'buttonClick' },
+            detail: {
+                type: 'buttonClick',
+                data: eventData,
+            },
         });
 
         document.dispatchEvent(event);
